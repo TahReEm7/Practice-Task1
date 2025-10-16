@@ -20,7 +20,7 @@ function HomePage() {
   if (loading) {
      return (
          <div className="min-h-screen flex justify-center items-center bg-gray-50">
-           <FiLoader className="animate-spin text-6xl text-red-600" />
+           <FiLoader className="animate-spin text-6xl text-blue-600" />
          </div>
        );
   }

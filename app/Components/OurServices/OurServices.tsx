@@ -36,10 +36,10 @@ const OurServices: React.FC = () => {
     <section className="py-12 md:py-20">
  
       <div className="text-center mb-12">
-        <h6 className="text-xl font-bold mb-2 text-red-500">Services</h6>
+        <h6 className="text-xl font-bold mb-2 text-blue-500">Services</h6>
         <h1 className="text-4xl font-bold mb-4 text-black">Our Services Area</h1>
         <p className="text-gray-600">
-          The majority have suffered alteration in some form, by injected humour,
+          The majority have suffeblue alteration in some form, by injected humour,
           or randomised <br /> words which don&apos;t look even slightly believable.
         </p>
       </div>
@@ -67,10 +67,10 @@ const OurServices: React.FC = () => {
                 {service.title}
               </h3>
               <div className="flex items-center justify-between">
-                <span className="text-red-600 font-bold text-lg">
+                <span className="text-blue-600 font-bold text-lg">
                   ${service.price}
                 </span>
-                 <Link href={`/services/${service.id}`} className="text-red-600 border border-red-600 px-4 py-1 rounded-md hover:bg-red-600 hover:text-white transition-all duration-300">
+                 <Link href={`/services/${service.id}`} className="text-blue-600 border border-blue-600 px-4 py-1 rounded-md hover:bg-blue-600 hover:text-white transition-all duration-300">
                   <FiArrowRight size={20} />
                 </Link>
               </div>
@@ -82,7 +82,7 @@ const OurServices: React.FC = () => {
       <div className="flex justify-center mt-10">
         <Link
           href="/services"
-          className="text-red-600 border-2 border-red-600 px-6 py-2 rounded-lg hover:bg-red-700 hover:text-white transition-all duration-300"
+          className="text-blue-600 border-2 border-blue-600 px-6 py-2 rounded-lg hover:bg-blue-700 hover:text-white transition-all duration-300"
         >
           More Services
         </Link>

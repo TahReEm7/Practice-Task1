@@ -29,7 +29,7 @@ function Availability() {
 
       {/* Address */}
       <div className="flex gap-4 items-center">
-        <div className="text-3xl text-red-400">
+        <div className="text-3xl text-blue-400">
           <FaMapMarkerAlt />
         </div>
         <div className="flex flex-col gap-1">

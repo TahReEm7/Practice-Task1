@@ -46,7 +46,7 @@ const Page: React.FC = () => {
   if (loading || !services.length || !service) {
     return (
       <div className="min-h-screen flex justify-center items-center bg-gray-50">
-        <FiLoader className="animate-spin text-6xl text-red-600" />
+        <FiLoader className="animate-spin text-6xl text-blue-600" />
       </div>
     );
   }
@@ -56,13 +56,13 @@ const Page: React.FC = () => {
       {/* Back Button */}
       <button
         onClick={() => router.back()}
-        className="flex items-center gap-2 text-red-600 font-semibold mb-6 hover:underline transition"
+        className="flex items-center gap-2 text-blue-600 font-semibold mb-6 hover:underline transition"
       >
         <FiArrowLeft /> Back
       </button>
 
       {/* Service Card */}
-      <div className="bg-white rounded-3xl shadow-xl overflow-hidden transform hover:scale-105 transition-transform duration-300 border-t-4 border-red-600">
+      <div className="bg-white rounded-3xl shadow-xl overflow-hidden transform hover:scale-105 transition-transform duration-300 border-t-4 border-blue-600">
         {service.image && (
           <Image
             src={service.image}
@@ -74,25 +74,25 @@ const Page: React.FC = () => {
         )}
 
         <div className="p-6">
-          <h1 className="text-3xl font-bold text-red-600 mb-3">{service.title}</h1>
+          <h1 className="text-3xl font-bold text-blue-600 mb-3">{service.title}</h1>
           <p className="text-gray-700 mb-4">{service.description}</p>
 
           <div className="flex flex-wrap gap-4 text-gray-600 font-medium">
-            <p className="bg-red-100 text-red-600 px-3 py-1 rounded-full">
+            <p className="bg-blue-100 text-blue-600 px-3 py-1 rounded-full">
               Price: ${service.price}
             </p>
             {service.duration && (
-              <p className="bg-red-100 text-red-600 px-3 py-1 rounded-full">
+              <p className="bg-blue-100 text-blue-600 px-3 py-1 rounded-full">
                 Duration: {service.duration}
               </p>
             )}
             {service.category && (
-              <p className="bg-red-100 text-red-600 px-3 py-1 rounded-full">
+              <p className="bg-blue-100 text-blue-600 px-3 py-1 rounded-full">
                 Category: {service.category}
               </p>
             )}
             {service.rating && (
-              <p className="bg-red-100 text-red-600 px-3 py-1 rounded-full">
+              <p className="bg-blue-100 text-blue-600 px-3 py-1 rounded-full">
                 Rating: {service.rating}
               </p>
             )}

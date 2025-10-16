@@ -33,19 +33,19 @@ const AboutUs: React.FC = () => {
         </div>
 
         <div className="md:col-span-6 text-gray-700">
-          <h2 className="text-xl font-bold mb-4 text-red-500">
+          <h2 className="text-xl font-bold mb-4 text-blue-500">
             About Us
           </h2>
           <p className="text-4xl text-black font-bold mb-4">
            We are qualified <br /> & of experience <br /> in this field
           </p>
           <p className="text-[#737373] mb-6">
-           There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which dont look even slightly believable. 
+           There are many variations of passages of Lorem Ipsum available, but the majority have suffeblue alteration in some form, by injected humour, or randomised words which dont look even slightly believable. 
           </p>
           <p className="text-[#737373] mb-6">
-          the majority have suffered alteration in some form, by injected humour, or randomised words which dont look even slightly believable. 
+          the majority have suffeblue alteration in some form, by injected humour, or randomised words which dont look even slightly believable. 
           </p>
-          <Link href={"/about"} className="bg-red-600 text-white px-6 py-2 rounded-lg hover:bg-red-700 transition-all duration-300">
+          <Link href={"/about"} className="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition-all duration-300">
             Get More Info
           </Link>
         </div>

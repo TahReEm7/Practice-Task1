@@ -6,13 +6,18 @@ import Link from "next/link";
 import { useState } from "react";
 import { usePathname } from "next/navigation";
 import { FiMenu, FiSearch, FiShoppingCart, FiX } from "react-icons/fi";
+import { Button, Modal } from "@mantine/core";
+import { useDisclosure } from "@mantine/hooks";
+import Appointment from "../Appointment/Appointment";
 
 const Nav = () => {
   const [menuOpen, setMenuOpen] = useState(false);
+   const [opened, { open, close }] = useDisclosure(false);
+
   const pathname = usePathname(); // current route
 
   return (
-    <nav className="px-3 w-full sticky top-0 left-0 z-1000 bg-white">
+    <nav className="px-3 w-full sticky top-0 left-0 z-1000 bg-white rounded-xl">
       <div className="flex justify-between items-center">
         {/* Logo */}
         <div>
@@ -29,8 +34,8 @@ const Nav = () => {
               href={link.url}
               className={`font-medium transition-colors duration-200 ${
                 pathname === link.url
-                  ? "text-red-600"
-                  : "text-gray-700 hover:text-red-600"
+                  ? "text-blue-600"
+                  : "text-gray-700 hover:text-blue-600"
               }`}
             >
               {link.label}
@@ -40,24 +45,19 @@ const Nav = () => {
 
         {/* Extra Section */}
         <div className="hidden md:flex items-center gap-5">
-          <button className="text-gray-600 hover:text-red-600 transition relative">
-            <FiShoppingCart size={22} />
-          </button>
+<Modal
+  opened={opened}
+  onClose={close}
+  title="Book an Appointment"
+  centered
+>
+ <Appointment></Appointment>
+</Modal>
 
-          <button className="text-gray-600 hover:text-red-600 transition">
-            <FiSearch size={22} />
-          </button>
 
-          <Link
-            href="/contacts"
-            className={`px-4 py-2 rounded-lg border transition-all duration-300 ${
-              pathname === "/contacts"
-                ? "bg-red-600 text-white border-red-600"
-                : "text-red-600 border-red-600 hover:bg-red-600 hover:text-white"
-            }`}
-          >
-            Appointment
-          </Link>
+      <Button className="bg-blue-600" variant="default" onClick={open}>
+        Appointment
+      </Button>
         </div>
 
         {/* Mobile Hamburger */}
@@ -78,8 +78,8 @@ const Nav = () => {
               onClick={() => setMenuOpen(false)}
               className={`font-medium transition-colors duration-200 ${
                 pathname === link.url
-                  ? "text-red-600"
-                  : "text-gray-700 hover:text-red-600"
+                  ? "text-blue-600"
+                  : "text-gray-700 hover:text-blue-600"
               }`}
             >
               {link.label}
@@ -87,21 +87,14 @@ const Nav = () => {
           ))}
 
           <div className="flex items-center gap-4 mt-2">
-            <button className="text-gray-600 hover:text-red-600 transition relative">
-              <FiShoppingCart size={22} />
-            </button>
-
-            <button className="text-gray-600 hover:text-red-600 transition">
-              <FiSearch size={22} />
-            </button>
 
             <Link
               href="/contacts"
               onClick={() => setMenuOpen(false)}
               className={`px-4 py-2 rounded-lg border transition-all duration-300 ${
                 pathname === "/contacts"
-                  ? "bg-red-600 text-white border-red-600"
-                  : "text-red-600 border-red-600 hover:bg-red-600 hover:text-white"
+                  ? "bg-blue-600 text-white border-blue-600"
+                  : "text-blue-600 border-blue-600 hover:bg-blue-600 hover:text-white"
               }`}
             >
               Appointment

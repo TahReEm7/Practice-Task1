@@ -1,5 +1,6 @@
 'use client';
 
+import { Pagination } from '@mantine/core';
 import Image from 'next/image';
 import Link from 'next/link';
 import React, { useEffect, useState } from 'react';
@@ -49,7 +50,7 @@ const Services: React.FC = () => {
   if (loading) {
     return (
       <div className="min-h-screen flex justify-center items-center bg-gray-50">
-        <FiLoader className="animate-spin text-6xl text-red-600" />
+        <FiLoader className="animate-spin text-6xl text-blue-600" />
       </div>
     );
   }
@@ -58,7 +59,7 @@ const Services: React.FC = () => {
     <section className='max-w-5xl mx-auto'>
       {/* Header */}
       <div className="text-center mb-12">
-        <h1 className="text-4xl font-bold mb-4 text-red-500">All Services</h1>
+        <h1 className="text-4xl font-bold mb-4 text-blue-500">All Services</h1>
         <p className="text-gray-600 max-w-2xl mx-auto">
           Explore all our car repair services with detailed pricing and
           description.
@@ -89,12 +90,12 @@ const Services: React.FC = () => {
               </h3>
 
               <div className="flex items-center justify-between">
-                <span className="text-red-600 font-bold text-lg">
+                <span className="text-blue-600 font-bold text-lg">
                   ${service.price}
                 </span>
                 <Link
                   href={`/services/${service.id}`}
-                  className="text-red-600 border border-red-600 px-4 py-1 rounded-md hover:bg-red-600 hover:text-white transition-all duration-300"
+                  className="text-blue-600 border border-blue-600 px-4 py-1 rounded-md hover:bg-blue-600 hover:text-white transition-all duration-300"
                 >
                   <FiArrowRight size={20} />
                 </Link>
@@ -105,11 +106,11 @@ const Services: React.FC = () => {
       </div>
 
       {/* Pagination Controls */}
-      <div className="flex justify-center items-center gap-4 mt-10">
+      {/* <div className="flex justify-center items-center gap-4 mt-10">
         <button
           onClick={() => goToPage(currentPage - 1)}
           disabled={currentPage === 1}
-          className="px-4 py-2 border rounded-lg hover:bg-red-600 hover:text-white transition disabled:opacity-50"
+          className="px-4 py-2 border rounded-lg hover:bg-blue-600 hover:text-white transition disabled:opacity-50"
         >
           Prev
         </button>
@@ -119,11 +120,17 @@ const Services: React.FC = () => {
         <button
           onClick={() => goToPage(currentPage + 1)}
           disabled={currentPage === totalPages}
-          className="px-4 py-2 border rounded-lg hover:bg-red-600 hover:text-white transition disabled:opacity-50"
+          className="px-4 py-2 border rounded-lg hover:bg-blue-600 hover:text-white transition disabled:opacity-50"
         >
           Next
         </button>
-      </div>
+      </div> */}
+
+      <div className="flex justify-center items-center gap-4 mt-10">   
+      <Pagination total={totalPages} value={currentPage} onChange={goToPage} mt="sm" />
+      </div> 
+
+
     </section>
   );
 };

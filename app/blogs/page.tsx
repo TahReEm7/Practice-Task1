@@ -1,5 +1,6 @@
 'use client';
 
+import { Accordion } from '@mantine/core';
 import React, { useEffect, useState } from 'react';
 import { FiLoader } from 'react-icons/fi';
 
@@ -66,12 +67,6 @@ const qnaData: QA[] = [
 ];
 
 const BlogPage: React.FC = () => {
-  const [openQuestion, setOpenQuestion] = useState<number | null>(null);
-
-  const toggleQuestion = (id: number): void => {
-    setOpenQuestion(openQuestion === id ? null : id);
-  };
-
   const [loading, setLoading] = useState(true);
 
   // Simulate loading (e.g., fetching data)
@@ -83,15 +78,15 @@ const BlogPage: React.FC = () => {
   if (loading) {
     return (
       <div className="min-h-screen flex justify-center items-center bg-gray-50">
-        <FiLoader className="animate-spin text-6xl text-red-600" />
+        <FiLoader className="animate-spin text-6xl text-blue-600" />
       </div>
     );
   }
 
   return (
-    <div className=" bg-gray-50 py-5 px-6">
+    <div className="bg-gray-50 py-5 px-6">
       <div className="max-w-5xl mx-auto">
-        <h1 className="text-4xl font-bold text-center text-red-600 mb-10">
+        <h1 className="text-4xl font-bold text-center text-blue-600 mb-10">
           Car Doctor Blog
         </h1>
 
@@ -109,7 +104,7 @@ const BlogPage: React.FC = () => {
                 {post.date} • {post.author}
               </p>
               <p className="text-gray-700 leading-relaxed">{post.content}</p>
-              <button className="mt-4 text-red-600 font-medium hover:underline">
+              <button className="mt-4 text-blue-600 font-medium hover:underline">
                 Read More →
               </button>
             </div>
@@ -117,30 +112,23 @@ const BlogPage: React.FC = () => {
         </div>
 
         {/* Q&A Section */}
-        <h2 className="text-3xl font-bold text-red-600 mb-6 text-center">
+        <h2 className="text-3xl font-bold text-blue-600 mb-6 text-center">
           FAQs & Q&A
         </h2>
 
-        <div className="space-y-4">
-          {qnaData.map((qa) => (
-            <div
-              key={qa.id}
-              className="bg-white rounded-lg shadow-md p-5 cursor-pointer"
-              onClick={() => toggleQuestion(qa.id)}
-            >
-              <div className="flex justify-between items-center">
-                <h3 className="text-lg font-semibold text-gray-800">
-                  {qa.question}
-                </h3>
-                <span className="text-red-600 text-xl">
-                  {openQuestion === qa.id ? '−' : '+'}
-                </span>
-              </div>
-              {openQuestion === qa.id && (
-                <p className="mt-3 text-gray-700">{qa.answer}</p>
-              )}
-            </div>
-          ))}
+        <div className="flex justify-center">
+          <Accordion
+            chevronPosition="right"
+            variant="separated"
+            className="w-full max-w-5xl shadow-xl p-4 rounded-xl"
+          >
+            {qnaData.map((qa) => (
+              <Accordion.Item key={qa.id} value={qa.id.toString()}>
+                <Accordion.Control>{qa.question}</Accordion.Control>
+                <Accordion.Panel>{qa.answer}</Accordion.Panel>
+              </Accordion.Item>
+            ))}
+          </Accordion>
         </div>
       </div>
     </div>

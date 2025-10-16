@@ -37,7 +37,7 @@ const Team: React.FC = () => {
 
   return (
     <section className="my-12 md:py-12 text-center">
-      <p className="text-red-500 text-xl font-bold">Team</p>
+      <p className="text-blue-500 text-xl font-bold">Team</p>
       <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-8">
         Meet Our Expert Team
       </h2>
@@ -68,7 +68,7 @@ const Team: React.FC = () => {
         {/* Prev Button */}
         <button
           onClick={prevSlide}
-          className="absolute top-1/2 -translate-y-1/2 left-2 sm:left-6 bg-red-600 text-white p-2 sm:p-3 rounded-full hover:bg-red-700 transition shadow-lg"
+          className="absolute top-1/2 -translate-y-1/2 left-2 sm:left-6 bg-blue-600 text-white p-2 sm:p-3 rounded-full hover:bg-blue-700 transition shadow-lg"
         >
           <FiArrowLeft size={20} />
         </button>
@@ -76,7 +76,7 @@ const Team: React.FC = () => {
         {/* Next Button */}
         <button
           onClick={nextSlide}
-          className="absolute top-1/2 -translate-y-1/2 right-2 sm:right-6 bg-red-600 text-white p-2 sm:p-3 rounded-full hover:bg-red-700 transition shadow-lg"
+          className="absolute top-1/2 -translate-y-1/2 right-2 sm:right-6 bg-blue-600 text-white p-2 sm:p-3 rounded-full hover:bg-blue-700 transition shadow-lg"
         >
           <FiArrowRight size={20} />
         </button>

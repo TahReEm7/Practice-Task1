@@ -65,7 +65,7 @@ const Banner: React.FC = () => {
 
           {/* Buttons */}
           <div className="mt-4 flex flex-col sm:flex-row gap-2 sm:gap-4">
-            <Link href={"/services"} className="bg-red-600 px-4 py-2 rounded-lg hover:bg-red-700 transition text-sm sm:text-base">
+            <Link href={"/services"} className="bg-blue-600 px-4 py-2 rounded-lg hover:bg-blue-700 transition text-sm sm:text-base">
               Discover More
             </Link>
             <Link href={"/blogs"} className="border border-white px-4 py-2 rounded-lg hover:bg-white hover:text-black transition text-sm sm:text-base">
@@ -87,7 +87,7 @@ const Banner: React.FC = () => {
         {/* Prev Button */}
         <button
           onClick={prevSlide}
-          className="absolute bottom-4 right-20 sm:right-24 md:right-28 z-50 bg-red-600 text-white p-2 sm:p-3 rounded-full hover:bg-red-700 transition shadow-lg"
+          className="absolute bottom-4 right-20 sm:right-24 md:right-28 z-50 bg-blue-600 text-white p-2 sm:p-3 rounded-full hover:bg-blue-700 transition shadow-lg"
         >
           <FiArrowLeft size={20} />
         </button>
@@ -95,7 +95,7 @@ const Banner: React.FC = () => {
         {/* Next Button */}
         <button
           onClick={nextSlide}
-          className="absolute bottom-4 right-4 z-50 bg-red-600 text-white p-2 sm:p-3 rounded-full hover:bg-red-700 transition shadow-lg"
+          className="absolute bottom-4 right-4 z-50 bg-blue-600 text-white p-2 sm:p-3 rounded-full hover:bg-blue-700 transition shadow-lg"
         >
           <FiArrowRight size={20} />
         </button>

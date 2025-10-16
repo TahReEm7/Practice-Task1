@@ -47,7 +47,7 @@ const Contact: React.FC = () => {
   if (pageLoading) {
     return (
       <div className="min-h-screen flex justify-center items-center bg-gray-50">
-        <FiLoader className="animate-spin text-6xl text-red-600" />
+        <FiLoader className="animate-spin text-6xl text-blue-600" />
       </div>
     );
   }
@@ -62,15 +62,15 @@ const Contact: React.FC = () => {
         {/* Contact Info */}
         <div className="grid md:grid-cols-3 gap-6 mb-8 text-center">
           <div>
-            <FiMail className="mx-auto text-2xl text-red-600" />
+            <FiMail className="mx-auto text-2xl text-blue-600" />
             <p className="mt-2 text-gray-700">info@cardoctor.com</p>
           </div>
           <div>
-            <FiPhone className="mx-auto text-2xl text-red-600" />
+            <FiPhone className="mx-auto text-2xl text-blue-600" />
             <p className="mt-2 text-gray-700">+880 1936532058</p>
           </div>
           <div>
-            <FiMapPin className="mx-auto text-2xl text-red-600" />
+            <FiMapPin className="mx-auto text-2xl text-blue-600" />
             <p className="mt-2 text-gray-700">Uttara, Dhaka</p>
           </div>
         </div>
@@ -83,7 +83,7 @@ const Contact: React.FC = () => {
             </p>
             <button
               onClick={() => setSubmitted(false)}
-              className="mt-4 bg-red-600 hover:bg-red-700 text-white px-6 py-2 rounded-lg transition"
+              className="mt-4 bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-lg transition"
             >
               Send Another
             </button>
@@ -101,11 +101,11 @@ const Contact: React.FC = () => {
                 id="name"
                 type="text"
                 name="name"
-                required
+                requiblue
                 value={formData.name}
                 onChange={handleChange}
                 placeholder="Enter your name"
-                className="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-red-500"
+                className="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
               />
             </div>
 
@@ -120,11 +120,11 @@ const Contact: React.FC = () => {
                 id="email"
                 type="email"
                 name="email"
-                required
+                requiblue
                 value={formData.email}
                 onChange={handleChange}
                 placeholder="Enter your email"
-                className="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-red-500"
+                className="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
               />
             </div>
 
@@ -138,19 +138,19 @@ const Contact: React.FC = () => {
               <textarea
                 id="message"
                 name="message"
-                required
+                requiblue
                 value={formData.message}
                 onChange={handleChange}
                 placeholder="Write your message..."
                 rows={5}
-                className="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-red-500"
+                className="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
               />
             </div>
 
             <button
               type="submit"
               disabled={loading}
-              className="w-full flex justify-center items-center gap-2 bg-red-600 hover:bg-red-700 text-white font-semibold py-3 rounded-lg transition disabled:opacity-70"
+              className="w-full flex justify-center items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 rounded-lg transition disabled:opacity-70"
             >
               {loading ? (
                 <>
