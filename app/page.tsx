@@ -1,8 +1,5 @@
-import HomePage from "./Components/Home/Home";
-
+import HomePage from './components/Home/page';
 
 export default function Home() {
-  return (
-  <div className="overflow-hidden "> <HomePage></HomePage></div>
-  );
+  return <HomePage></HomePage>;
 }
