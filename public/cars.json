@@ -42,7 +42,7 @@
   {
     "id": 5,
     "title": "Car Wash & Interior Detailing",
-    "image": "/service5.jpeg",
+    "image": "/service5.jpg",
     "price": 40,
     "duration": "45-60 mins",
     "category": "Cleaning",
@@ -52,7 +52,7 @@
   {
     "id": 6,
     "title": "Battery Testing & Replacement",
-    "image": "/service6.jpeg",
+    "image": "/service6.jpg",
     "price": 100,
     "duration": "30 mins",
     "category": "Electrical",
@@ -62,7 +62,7 @@
   {
     "id": 7,
     "title": "Air Conditioning Service",
-    "image": "/service6.jpeg",
+    "image": "/service6.jpg",
     "price": 85,
     "duration": "1 hour",
     "category": "Cooling",
@@ -72,7 +72,7 @@
   {
     "id": 8,
     "title": "Transmission Repair",
-    "image": "/service5.jpeg",
+    "image": "/service5.jpg",
     "price": 350,
     "duration": "3-5 hours",
     "category": "Transmission",
