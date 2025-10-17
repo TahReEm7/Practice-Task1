@@ -1,11 +1,13 @@
 "use client";
 
-import React, { useState } from "react";
+import { Carousel } from "@mantine/carousel";
+import '@mantine/carousel/styles.css';
+import '@mantine/core/styles.css';
+import { IconArrowLeft, IconArrowRight } from "@tabler/icons-react";
 import Image from "next/image";
-import { FiArrowLeft, FiArrowRight } from "react-icons/fi";
 import Link from "next/link";
+import React from "react";
 
-// ✅ Slide type
 interface Slide {
   id: number;
   image: string;
@@ -35,71 +37,60 @@ const slides: Slide[] = [
 ];
 
 const Banner: React.FC = () => {
-  const [current, setCurrent] = useState<number>(0);
-  const total: number = slides.length;
-  // const nextIndex: number = (current + 1) % total;
-
-  const prevSlide = (): void => setCurrent(current === 0 ? total - 1 : current - 1);
-  const nextSlide = (): void => setCurrent(current === total - 1 ? 0 : current + 1);
-
   return (
     <section className="relative w-full">
-      {/* Slide */}
-      <div className="relative w-full h-[50vh] sm:h-[30vh] md:h-[40vh] lg:h-[60vh] overflow-hidden rounded-xl">
-        <Image
-          src={slides[current].image}
-          alt={slides[current].title}
-          fill
-          className="object-cover"
-          priority
-        />
+     <Carousel
+  withIndicators
+  height="70vh"
+  loop
+  nextControlIcon={<IconArrowRight size={22} />}
+  previousControlIcon={<IconArrowLeft size={22} />}
+  align="center"
+  slideGap="md"
+  classNames={{
+    indicator:
+      "w-2 h-2 bg-gray-300 transition-all duration-300 data-[active]:w-6 data-[active]:bg-blue-600 rounded-full",
+  }}
+>
+        {slides.map((slide) => (
+          <Carousel.Slide key={slide.id}>
+            <div className="relative w-full h-[50vh] sm:h-[60vh] lg:h-[70vh] rounded-xl overflow-hidden">
+              {/* Background Image */}
+              <Image
+                src={slide.image}
+                alt={slide.title}
+                fill
+                className="object-cover"
+                priority
+              />
 
-        {/* Overlay */}
-        <div className="absolute inset-0 bg-black/40 flex flex-col justify-center px-4 sm:px-6 md:px-12 lg:px-24 text-white">
-          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold">
-            {slides[current].title}
-          </h2>
-          <p className="mt-2 text-sm sm:text-base md:text-lg lg:text-2xl">
-            {slides[current].describe}
-          </p>
-
-          {/* Buttons */}
-          <div className="mt-4 flex flex-col sm:flex-row gap-2 sm:gap-4">
-            <Link href={"/services"} className="bg-blue-600 px-4 py-2 rounded-lg hover:bg-blue-700 transition text-sm sm:text-base">
-              Discover More
-            </Link>
-            <Link href={"/blogs"} className="border border-white px-4 py-2 rounded-lg hover:bg-white hover:text-black transition text-sm sm:text-base">
-              Latest Project
-            </Link>
-          </div>
-        </div>
-
-        {/* Next Image Preview */}
-        {/* <div className="absolute bottom-4 right-4 w-20 h-12 sm:w-24 sm:h-16 md:w-32 md:h-20 border border-white/50 overflow-hidden rounded-md shadow-lg">
-          <Image
-            src={slides[nextIndex].image}
-            alt="Next Slide"
-            fill
-            className="object-cover opacity-80"
-          />
-        </div> */}
-
-        {/* Prev Button */}
-        <button
-          onClick={prevSlide}
-          className="absolute bottom-4 right-20 sm:right-24 md:right-28 z-50 bg-blue-600 text-white p-2 sm:p-3 rounded-full hover:bg-blue-700 transition shadow-lg"
-        >
-          <FiArrowLeft size={20} />
-        </button>
-
-        {/* Next Button */}
-        <button
-          onClick={nextSlide}
-          className="absolute bottom-4 right-4 z-50 bg-blue-600 text-white p-2 sm:p-3 rounded-full hover:bg-blue-700 transition shadow-lg"
-        >
-          <FiArrowRight size={20} />
-        </button>
-      </div>
+              {/* Overlay */}
+              <div className="absolute inset-0 bg-black/50 flex flex-col justify-center items-start px-6 sm:px-12 md:px-20 text-white">
+                <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-2">
+                  {slide.title}
+                </h2>
+                <p className="text-lg sm:text-xl md:text-2xl mb-6">
+                  {slide.describe}
+                </p>
+                <div className="flex gap-4">
+                  <Link
+                    href="/services"
+                    className="bg-blue-600 px-4 py-2 rounded-lg hover:bg-blue-700 transition text-sm sm:text-base"
+                  >
+                    Discover More
+                  </Link>
+                  <Link
+                    href="/blogs"
+                    className="border border-white px-4 py-2 rounded-lg hover:bg-white hover:text-black transition text-sm sm:text-base"
+                  >
+                    Latest Project
+                  </Link>
+                </div>
+              </div>
+            </div>
+          </Carousel.Slide>
+        ))}
+      </Carousel>
     </section>
   );
 };

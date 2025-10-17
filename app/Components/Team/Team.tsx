@@ -1,12 +1,8 @@
 "use client";
 
 import { Carousel } from "@mantine/carousel";
-import '@mantine/carousel/styles.css';
-import '@mantine/core/styles.css';
-
-import '@mantine/carousel/styles.css';
-import Image from "next/image";
 import React from "react";
+import Image from "next/image";
 
 interface TeamMember {
   id: number;
@@ -31,23 +27,20 @@ const Team: React.FC = () => {
         Meet Our Expert Team
       </h2>
 
-      <div className=" mx-auto">
- <Carousel
-  slideSize="100%"
-  height={250}
-  slideGap="md"
-  withIndicators
-  withControls
-  align="center"
-  loop
-  emblaOptions={{
-    loop: true,
-    align: 'center',
-  }}
->
+      <div className="max-w-[1440px] mx-auto">
+        <Carousel
+          slideSize="33.3333%" 
+          slideGap="md"
+          height={340}
+          emblaOptions={{
+            loop: true,
+            dragFree: false,
+            align: "center",
+          }}
+        >
           {team.map((member) => (
             <Carousel.Slide key={member.id}>
-              <div className="bg-gray-100 shadow-xl rounded-xl p-6 flex flex-col items-center hover:scale-105 transition-transform duration-300">
+              <div className="bg-white shadow-xl rounded-xl p-6 flex flex-col items-center hover:scale-105 transition-transform duration-300">
                 <div className="relative w-40 h-40 mb-4 rounded-full overflow-hidden">
                   <Image
                     src={member.image}
@@ -55,7 +48,6 @@ const Team: React.FC = () => {
                     fill
                     className="object-cover"
                   />
-
                 </div>
                 <h3 className="text-xl font-semibold">{member.name}</h3>
                 <p className="text-gray-500">{member.role}</p>

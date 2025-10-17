@@ -5,7 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 import { usePathname } from "next/navigation";
-import { FiMenu, FiSearch, FiShoppingCart, FiX } from "react-icons/fi";
+import { FiMenu, FiX } from "react-icons/fi";
 import { Button, Modal } from "@mantine/core";
 import { useDisclosure } from "@mantine/hooks";
 import Appointment from "../Appointment/Appointment";
