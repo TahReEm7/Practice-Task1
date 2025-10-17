@@ -13,8 +13,8 @@ interface TeamMember {
 
 const team: TeamMember[] = [
   { id: 1, name: "John Smith", role: "Lead Mechanic", image: "/team1.jpg" },
-  { id: 2, name: "Sophia Rahman", role: "Car Specialist", image: "/team2.jpg" },
-  { id: 3, name: "David Khan", role: "Engine Expert", image: "/team3.jpg" },
+  { id: 2, name: "Sophia Rahman", role: "Car Specialist", image: "/team2.png" },
+  { id: 3, name: "David Khan", role: "Engine Expert", image: "/team3.jpeg" },
   { id: 4, name: "Maria Islam", role: "Customer Advisor", image: "/team4.jpg" },
   { id: 5, name: "Michael Roy", role: "Technician", image: "/team5.jpg" },
 ];

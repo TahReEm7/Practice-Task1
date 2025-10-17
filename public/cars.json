@@ -2,7 +2,7 @@
   {
     "id": 1,
     "title": "Engine Diagnostics",
-    "image": "/services/engine-diagnostics.jpg",
+    "image": "/service1.jpeg",
     "price": 120,
     "duration": "2-3 hours",
     "category": "Engine",
@@ -12,7 +12,7 @@
   {
     "id": 2,
     "title": "Oil Change & Filter Replacement",
-    "image": "/services/oil-change.jpg",
+    "image": "/service2.jpeg",
     "price": 60,
     "duration": "30-45 mins",
     "category": "Maintenance",
@@ -22,7 +22,7 @@
   {
     "id": 3,
     "title": "Brake Inspection & Repair",
-    "image": "/services/brake-repair.jpg",
+    "image": "/service3.jpeg",
     "price": 90,
     "duration": "1-2 hours",
     "category": "Brakes",
@@ -32,7 +32,7 @@
   {
     "id": 4,
     "title": "Tire Alignment & Balancing",
-    "image": "/services/tire-alignment.jpg",
+    "image": "/service4.jpeg",
     "price": 70,
     "duration": "1 hour",
     "category": "Tires",
@@ -42,7 +42,7 @@
   {
     "id": 5,
     "title": "Car Wash & Interior Detailing",
-    "image": "/services/car-wash.jpg",
+    "image": "/service5.jpeg",
     "price": 40,
     "duration": "45-60 mins",
     "category": "Cleaning",
@@ -52,7 +52,7 @@
   {
     "id": 6,
     "title": "Battery Testing & Replacement",
-    "image": "/services/battery-replacement.jpg",
+    "image": "/service6.jpeg",
     "price": 100,
     "duration": "30 mins",
     "category": "Electrical",
@@ -62,7 +62,7 @@
   {
     "id": 7,
     "title": "Air Conditioning Service",
-    "image": "/services/ac-repair.jpg",
+    "image": "/service6.jpeg",
     "price": 85,
     "duration": "1 hour",
     "category": "Cooling",
@@ -72,7 +72,7 @@
   {
     "id": 8,
     "title": "Transmission Repair",
-    "image": "/services/transmission-repair.jpg",
+    "image": "/service5.jpeg",
     "price": 350,
     "duration": "3-5 hours",
     "category": "Transmission",
@@ -82,7 +82,7 @@
   {
     "id": 9,
     "title": "Suspension & Steering",
-    "image": "/services/suspension.jpg",
+    "image": "/service4.jpeg",
     "price": 150,
     "duration": "2 hours",
     "category": "Suspension",
@@ -92,7 +92,7 @@
   {
     "id": 10,
     "title": "Exhaust System Repair",
-    "image": "/services/exhaust.jpg",
+    "image": "/service3.jpeg",
     "price": 130,
     "duration": "2 hours",
     "category": "Exhaust",
@@ -102,7 +102,7 @@
   {
     "id": 11,
     "title": "Headlight Restoration",
-    "image": "/services/headlight.jpg",
+    "image": "/service2.jpeg",
     "price": 50,
     "duration": "45 mins",
     "category": "Lighting",
@@ -112,7 +112,7 @@
   {
     "id": 12,
     "title": "Windshield Replacement",
-    "image": "/services/windshield.jpg",
+    "image": "/service1.jpeg",
     "price": 200,
     "duration": "2 hours",
     "category": "Glass",
@@ -122,7 +122,7 @@
   {
     "id": 13,
     "title": "Electrical System Diagnostics",
-    "image": "/services/electrical.jpg",
+    "image": "/service4.jpeg",
     "price": 110,
     "duration": "1-2 hours",
     "category": "Electrical",
@@ -132,7 +132,7 @@
   {
     "id": 14,
     "title": "Paint & Body Repair",
-    "image": "/services/paint-body.jpg",
+    "image": "/service2.jpeg",
     "price": 250,
     "duration": "3-6 hours",
     "category": "Bodywork",

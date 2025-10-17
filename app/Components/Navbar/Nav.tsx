@@ -17,7 +17,7 @@ const Nav = () => {
   const pathname = usePathname(); // current route
 
   return (
-    <nav className="px-3 w-full sticky top-0 left-0 z-1000 bg-white rounded-xl max-w-[1440px]">
+    <nav className="px-3 w-full sticky top-0 left-0 z-1000 bg-white rounded-xl max-w-[1440px] mx-auto">
       <div className="flex justify-between items-center">
         {/* Logo */}
         <div>
