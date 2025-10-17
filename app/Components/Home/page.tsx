@@ -2,11 +2,12 @@
 
 import { useEffect, useState } from "react";
 import { FiLoader } from "react-icons/fi";
-import AboutUs from "../Components/AboutUs/AboutUs";
-import Availability from "../Components/Availability/Availability";
-import Banner from "../Components/Banner/Banner";
-import OurServices from "../Components/OurServices/OurServices";
-import Team from "../Components/Team/Team";
+
+import AboutUs from "../AboutUs/AboutUs";
+import Banner from "../Banner/Banner";
+import OurServices from "../OurServices/OurServices";
+import Availability from "../Availibility/Availability";
+import Team from "../Team/Team";
 
 
 function HomePage() {

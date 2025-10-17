@@ -42,10 +42,9 @@ const Banner: React.FC = () => {
      <Carousel
   withIndicators
   height="70vh"
-  loop
   nextControlIcon={<IconArrowRight size={22} />}
   previousControlIcon={<IconArrowLeft size={22} />}
-  align="center"
+  
   slideGap="md"
   classNames={{
     indicator:
