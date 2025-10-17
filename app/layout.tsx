@@ -1,11 +1,11 @@
 
+import { ColorSchemeScript, mantineHtmlProps, MantineProvider } from "@mantine/core";
+import "@mantine/core/styles.css";
 import type { Metadata } from "next";
 import { Roboto } from "next/font/google";
-import { MantineProvider, ColorSchemeScript } from "@mantine/core";
-import "@mantine/core/styles.css"; 
-import "./globals.css";
-import Nav from "./Components/Navbar/Nav";
 import Footer from "./Components/Footer/Footer";
+import Nav from "./Components/Navbar/Nav";
+import "./globals.css";
 
 const roboto = Roboto({
   subsets: ["latin"],
@@ -27,9 +27,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" {...mantineHtmlProps}>
       <head>
-        <ColorSchemeScript />
+        <ColorSchemeScript forceColorScheme="light" />
       </head>
       <body className={`${roboto.variable} font-sans antialiased`}>
         <MantineProvider>

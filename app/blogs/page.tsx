@@ -85,7 +85,7 @@ const BlogPage: React.FC = () => {
 
   return (
     <div className="bg-gray-50 py-5 px-6">
-      <div className="max-w-5xl mx-auto">
+      <div className=" max-w-[1440px] mx-auto">
         <h1 className="text-4xl font-bold text-center text-blue-600 mb-10">
           Car Doctor Blog
         </h1>
@@ -120,7 +120,7 @@ const BlogPage: React.FC = () => {
           <Accordion
             chevronPosition="right"
             variant="separated"
-            className="w-full max-w-5xl shadow-xl p-4 rounded-xl"
+            className="w-full  max-w-[1440px] shadow-xl p-4 rounded-xl"
           >
             {qnaData.map((qa) => (
               <Accordion.Item key={qa.id} value={qa.id.toString()}>

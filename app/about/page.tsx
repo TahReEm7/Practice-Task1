@@ -23,7 +23,7 @@ const About: React.FC = () => {
 
   return (
     <div className="min-h-screen bg-gray-50 py-5 px-6">
-      <div className="max-w-5xl mx-auto">
+      <div className=" max-w-[1440px] mx-auto">
         {/* Title */}
         <h1 className="text-4xl font-bold text-center text-blue-600 mb-8">
           About Car Doctor

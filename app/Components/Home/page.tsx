@@ -1,13 +1,12 @@
 "use client";
 
-import React, { useState, useEffect } from "react";
-import Banner from "../Banner/Banner";
-import AboutUs from "../About Us/AboutUs";
-import OurServices from "../OurServices/OurServices";
-import Availability from "../Availibility/Availability";
-import { AiOutlineLoading3Quarters } from "react-icons/ai";
-import Team from "../Team/Team";
+import { useEffect, useState } from "react";
 import { FiLoader } from "react-icons/fi";
+import AboutUs from "../About Us/AboutUs";
+import Availability from "../Availibility/Availability";
+import Banner from "../Banner/Banner";
+import OurServices from "../OurServices/OurServices";
+import Team from "../Team/Team";
 
 function HomePage() {
   const [loading, setLoading] = useState(true);
@@ -26,7 +25,7 @@ function HomePage() {
   }
 
   return (
-    <div className="max-w-5xl mx-auto">
+    <div className=" max-w-[1440px] mx-auto">
       <Banner />
       <AboutUs />
       <OurServices />

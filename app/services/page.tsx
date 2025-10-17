@@ -56,7 +56,7 @@ const Services: React.FC = () => {
   }
 
   return (
-    <section className='max-w-5xl mx-auto'>
+    <section className=' max-w-[1440px] mx-auto'>
       {/* Header */}
       <div className="text-center mb-12">
         <h1 className="text-4xl font-bold mb-4 text-blue-500">All Services</h1>

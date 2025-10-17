@@ -1,8 +1,12 @@
 "use client";
 
-import React, { useState } from "react";
+import { Carousel } from "@mantine/carousel";
+import '@mantine/carousel/styles.css';
+import '@mantine/core/styles.css';
+
+import '@mantine/carousel/styles.css';
 import Image from "next/image";
-import { FiArrowLeft, FiArrowRight } from "react-icons/fi";
+import React from "react";
 
 interface TeamMember {
   id: number;
@@ -20,21 +24,6 @@ const team: TeamMember[] = [
 ];
 
 const Team: React.FC = () => {
-  const [current, setCurrent] = useState<number>(0);
-  const total = team.length;
-
-  const prevSlide = (): void =>
-    setCurrent(current === 0 ? total - 1 : current - 1);
-  const nextSlide = (): void =>
-    setCurrent(current === total - 1 ? 0 : current + 1);
-
-  // Slice team to show 3 cards at a time
-  const visibleSlides = [
-    team[current],
-    team[(current + 1) % total],
-    team[(current + 2) % total],
-  ];
-
   return (
     <section className="my-12 md:py-12 text-center">
       <p className="text-blue-500 text-xl font-bold">Team</p>
@@ -42,48 +31,41 @@ const Team: React.FC = () => {
         Meet Our Expert Team
       </h2>
 
-      <div className=" relative overflow-hidden">
-        {/* Carousel Slides */}
-        <div className="flex justify-center gap-6 py-4 transition-all duration-500 ease-in-out">
-          {visibleSlides.map((member) => (
-            <div
-              key={member.id}
-              className="bg-white shadow-xl rounded-xl p-6 w-64 md:w-72 flex flex-col items-center hover:scale-105 transition-transform duration-300"
-            >
-              <div className="relative w-40 h-40 mb-4 rounded-full overflow-hidden">
-                <Image
-                  src={member.image}
-                  alt={member.name}
-                  fill
-                  className="object-cover"
-                />
+      <div className=" mx-auto">
+ <Carousel
+  slideSize="100%"
+  height={250}
+  slideGap="md"
+  withIndicators
+  withControls
+  align="center"
+  loop
+  emblaOptions={{
+    loop: true,
+    align: 'center',
+  }}
+>
+          {team.map((member) => (
+            <Carousel.Slide key={member.id}>
+              <div className="bg-gray-100 shadow-xl rounded-xl p-6 flex flex-col items-center hover:scale-105 transition-transform duration-300">
+                <div className="relative w-40 h-40 mb-4 rounded-full overflow-hidden">
+                  <Image
+                    src={member.image}
+                    alt={member.name}
+                    fill
+                    className="object-cover"
+                  />
+
+                </div>
+                <h3 className="text-xl font-semibold">{member.name}</h3>
+                <p className="text-gray-500">{member.role}</p>
               </div>
-              <h3 className="text-xl font-semibold">{member.name}</h3>
-              <p className="text-gray-500">{member.role}</p>
-            </div>
-            
+            </Carousel.Slide>
           ))}
-        </div>
-
-        {/* Prev Button */}
-        <button
-          onClick={prevSlide}
-          className="absolute top-1/2 -translate-y-1/2 left-2 sm:left-6 bg-blue-600 text-white p-2 sm:p-3 rounded-full hover:bg-blue-700 transition shadow-lg"
-        >
-          <FiArrowLeft size={20} />
-        </button>
-
-        {/* Next Button */}
-        <button
-          onClick={nextSlide}
-          className="absolute top-1/2 -translate-y-1/2 right-2 sm:right-6 bg-blue-600 text-white p-2 sm:p-3 rounded-full hover:bg-blue-700 transition shadow-lg"
-        >
-          <FiArrowRight size={20} />
-        </button>
+        </Carousel>
       </div>
     </section>
   );
 };
 
 export default Team;
-
