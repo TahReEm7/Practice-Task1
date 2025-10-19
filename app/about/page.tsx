@@ -22,7 +22,7 @@ const About: React.FC = () => {
   }
 
   return (
-    <div className="min-h-screen bg-gray-50 py-5 px-6">
+    <div className="min-h-screen bg-gray-50 py-12 px-4">
       <div className=" max-w-[1440px] mx-auto">
         {/* Title */}
         <h1 className="text-4xl font-bold text-center text-blue-600 mb-8">
@@ -49,7 +49,7 @@ const About: React.FC = () => {
         </div>
 
         {/* Mission Section */}
-        <h2 className="text-3xl font-bold text-gray-800 mb-6 text-center">
+        <h2 className="text-3xl font-bold text-gray-800 mb-12 text-center">
           Our Mission & Values
         </h2>
         <div className="grid md:grid-cols-3 gap-8 mb-16">
@@ -86,7 +86,7 @@ const About: React.FC = () => {
         </div>
 
         {/* Team Section */}
-        <h2 className="text-3xl font-bold text-gray-800 mb-6 text-center">
+        <h2 className="text-3xl font-bold text-gray-800 mb-12 text-center">
           Meet Our Team
         </h2>
         <div className="grid md:grid-cols-3 gap-8">

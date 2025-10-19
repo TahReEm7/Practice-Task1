@@ -3,7 +3,7 @@ import { FaCalendarAlt, FaPhoneAlt, FaMapMarkerAlt } from 'react-icons/fa';
 
 function Availability() {
   return (
-    <section className="bg-black rounded-md text-white grid grid-cols-1 md:grid-cols-3 gap-6 p-10 md:p-20 my-10">
+    <section className="bg-black rounded-md text-white grid grid-cols-1 md:grid-cols-3 gap-6 p-10 md:p-20 my-12">
       
       {/* Opening Hours */}
       <div className="flex gap-4 items-center">

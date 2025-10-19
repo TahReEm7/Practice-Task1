@@ -21,13 +21,13 @@ const team: TeamMember[] = [
 
 const Team: React.FC = () => {
   return (
-    <section className="my-12 md:py-12 text-center">
+    <section className="md:py-12 text-center">
       <p className="text-blue-500 text-xl font-bold">Team</p>
-      <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-8">
+      <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-16">
         Meet Our Expert Team
       </h2>
 
-      <div className="max-w-[1440px] mx-auto">
+      <div className="max-w-[1440px] mx-auto mt-4">
         <Carousel
           slideSize="33.3333%" 
           slideGap="md"

@@ -6,7 +6,7 @@ import React from "react";
 
 const AboutUs: React.FC = () => {
   return (
-    <section className=" py-12 md:py-20">
+    <section className=" py-12">
       <div className="grid grid-cols-1 md:grid-cols-10 gap-8 ">
         <div className="md:col-span-4 relative flex  ">
           {/* Back Image */}

@@ -33,7 +33,7 @@ const OurServices: React.FC = () => {
   if (!services) return <p>Loading or Service not found...</p>;
 
   return (
-    <section className="py-12 md:py-20">
+    <section className="py-12 ">
  
       <div className="text-center mb-12">
         <h6 className="text-xl font-bold mb-2 text-blue-500">Services</h6>

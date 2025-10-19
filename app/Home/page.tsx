@@ -2,12 +2,12 @@
 
 import { useEffect, useState } from "react";
 import { FiLoader } from "react-icons/fi";
+import Banner from "./components/Banner";
+import AboutUs from "./components/AboutUs";
+import OurServices from "./components/OurServices";
+import Availability from "./components/Availability";
+import Team from "./components/Team";
 
-import AboutUs from "../AboutUs/AboutUs";
-import Banner from "../Banner/Banner";
-import OurServices from "../OurServices/OurServices";
-import Availability from "../Availibility/Availability";
-import Team from "../Team/Team";
 
 
 function HomePage() {
@@ -27,7 +27,7 @@ function HomePage() {
   }
 
   return (
-    <div className=" max-w-[1440px] mx-auto">
+    <div className=" max-w-[1440px] mx-auto ">
       <Banner />
       <AboutUs />
       <OurServices />

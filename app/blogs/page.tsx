@@ -84,14 +84,14 @@ const BlogPage: React.FC = () => {
   }
 
   return (
-    <div className="bg-gray-50 py-5 px-6">
+    <div className="bg-gray-50 py-4 px-6 mb-12">
       <div className=" max-w-[1440px] mx-auto">
-        <h1 className="text-4xl font-bold text-center text-blue-600 mb-10">
+        <h1 className="text-4xl font-bold text-center text-blue-600 mb-12">
           Car Doctor Blog
         </h1>
 
         {/* Blog List */}
-        <div className="space-y-8 mb-16">
+        <div className="space-y-8 mb-12">
           {blogPosts.map((post) => (
             <div
               key={post.id}
@@ -112,7 +112,7 @@ const BlogPage: React.FC = () => {
         </div>
 
         {/* Q&A Section */}
-        <h2 className="text-3xl font-bold text-blue-600 mb-6 text-center">
+        <h2 className="text-3xl font-bold text-blue-600 my-12 text-center">
           FAQs & Q&A
         </h2>
 
