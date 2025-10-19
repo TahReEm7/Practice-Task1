@@ -18,19 +18,19 @@ interface Slide {
 const slides: Slide[] = [
   {
     id: 1,
-    image: "/hero1.jpg",
+    image: "/Banner/hero1.jpg",
     title: "Expert Car Care",
     describe: "Precision. Performance. Perfection.",
   },
   {
     id: 2,
-    image: "/hero2.jpg",
+    image: "/Banner/hero2.jpg",
     title: "Professional Auto Services",
     describe: "Reliable, Efficient, and Affordable.",
   },
   {
     id: 3,
-    image: "/hero3.jpg",
+    image: "/Banner/hero3.jpg",
     title: "Your Car, Our Priority",
     describe: "Top-notch maintenance and repair services.",
   },
