@@ -8,7 +8,7 @@ import { usePathname } from "next/navigation";
 import { FiMenu, FiX } from "react-icons/fi";
 import { Button, Modal } from "@mantine/core";
 import { useDisclosure } from "@mantine/hooks";
-import Appointment from "../Appointment/Appointment";
+import Appointment from "../Home/Appointment";
 
 const Nav = () => {
   const [menuOpen, setMenuOpen] = useState(false);
