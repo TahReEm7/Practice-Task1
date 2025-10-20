@@ -1,12 +1,12 @@
-import Contact from '@/app/Components/Contacts'
-import React from 'react'
+import { Contact } from "@/app/components";
+
 
 function ContactsPage() {
   return (
     <div>
-      <Contact></Contact>
+      <Contact />
     </div>
-  )
+  );
 }
 
-export default ContactsPage
+export default ContactsPage;

@@ -2,11 +2,11 @@
 
 import { useEffect, useState } from 'react';
 import { FiLoader } from 'react-icons/fi';
-import AboutUs from './AboutUs';
-import Availability from './Availability';
-import Banner from './Banner';
-import OurServices from './OurServices';
-import Team from './Team';
+import AboutUs from './aboutUs';
+import Availability from './availability';
+import Banner from './banner';
+import OurServices from './ourServices';
+import Team from './team';
 
 function HomePage() {
   const [loading, setLoading] = useState(true);

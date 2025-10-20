@@ -1,12 +1,12 @@
-import BlogPage from '@/app/Components/Blogs'
-import React from 'react'
+import { BlogPage } from "@/app/components";
+
 
 function Blog() {
   return (
     <div>
-      <BlogPage></BlogPage>
+      <BlogPage />
     </div>
-  )
+  );
 }
 
-export default Blog
+export default Blog;

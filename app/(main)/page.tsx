@@ -1,10 +1,10 @@
-import HomePage from '../Components/Home';
-import MainPage from './Home/page';
+import { HomePage } from "../components";
+
 
 function Home() {
   return (
     <div>
-      <MainPage></MainPage>
+      <HomePage></HomePage>
     </div>
   );
 }

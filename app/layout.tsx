@@ -1,23 +1,26 @@
-
-import { ColorSchemeScript, mantineHtmlProps, MantineProvider } from "@mantine/core";
-import "@mantine/core/styles.css";
-import type { Metadata } from "next";
-import { Roboto } from "next/font/google";
-import Footer from "./Components/Footer/Footer";
-import Nav from "./Components/Navbar/Nav";
-import "./globals.css";
+import {
+  ColorSchemeScript,
+  mantineHtmlProps,
+  MantineProvider,
+} from '@mantine/core';
+import '@mantine/core/styles.css';
+import type { Metadata } from 'next';
+import { Roboto } from 'next/font/google';
+import Footer from './components/footer/Footer';
+import Nav from './components/navbar/Nav';
+import './globals.css';
 
 const roboto = Roboto({
-  subsets: ["latin"],
-  weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
-  variable: "--font-roboto",
+  subsets: ['latin'],
+  weight: ['100', '200', '300', '400', '500', '600', '700', '800', '900'],
+  variable: '--font-roboto',
 });
 
 export const metadata: Metadata = {
-  title: "Car Doctor",
-  description: "Car Doctor - Expert car maintenance and repair services",
+  title: 'Car Doctor',
+  description: 'Car Doctor - Expert car maintenance and repair services',
   icons: {
-    icon: "/logo.png",
+    icon: '/logo.png',
   },
 };
 
