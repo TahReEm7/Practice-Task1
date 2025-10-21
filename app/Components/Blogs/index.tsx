@@ -1,6 +1,4 @@
 'use client';
-
-import { Accordion } from '@mantine/core';
 import React, { useEffect, useState } from 'react';
 import { FiLoader } from 'react-icons/fi';
 import BlogList from './blogList';

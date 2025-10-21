@@ -6,9 +6,9 @@ import {
 import '@mantine/core/styles.css';
 import type { Metadata } from 'next';
 import { Roboto } from 'next/font/google';
-import Footer from './components/footer/Footer';
-import Nav from './components/navbar/Nav';
+
 import './globals.css';
+import { Footer, Navbar } from './components';
 
 const roboto = Roboto({
   subsets: ['latin'],
@@ -37,7 +37,7 @@ export default function RootLayout({
       <body className={`${roboto.variable} font-sans antialiased`}>
         <MantineProvider>
           <div className="w-11/12 min-h-screen mx-auto p-2">
-            <Nav />
+            <Navbar />
             {children}
           </div>
           <Footer />
